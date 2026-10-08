@@ -657,6 +657,9 @@ body::before {
 
 <body>
 
+<!-- MÚSICA -->
+<audio id="musica" src="música.mp3" loop></audio>
+
 <div id="particles"></div>
 
 
@@ -1217,6 +1220,19 @@ body::before {
 <script>
 
 /* =========================
+   MÚSICA
+========================= */
+
+const musica = document.getElementById("musica");
+
+document.addEventListener("click", () => {
+
+    musica.play().catch(() => {});
+
+}, { once: true });
+
+
+/* =========================
    PARTÍCULAS
 ========================= */
 
@@ -1347,4 +1363,4 @@ document.getElementById("yes")
 </script>
 
 </body>
-  </html>
+</html>
